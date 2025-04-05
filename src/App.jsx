@@ -4,6 +4,7 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const w = 500;
 
   return (
     <>
@@ -17,6 +18,18 @@ function App() {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9EZNefY1fRsA4qVFTBviWyj-5KHY6U8LG0g&s"
         }
         alt="Nice"
+        loading="lazy"
+      />
+
+      <hr />
+      <br />
+      <img
+        src={
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png"
+        }
+        width={w - 20}
+        alt="Phone"
+        loading="lazy"
       />
     </>
   );
