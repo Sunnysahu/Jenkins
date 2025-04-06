@@ -21,6 +21,13 @@ function App() {
         alt="Nice"
         loading="lazy"
       />
+      <img
+        src={
+          "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        }
+        alt="Nice"
+        loading="lazy"
+      />
 
       <hr />
       <br />
