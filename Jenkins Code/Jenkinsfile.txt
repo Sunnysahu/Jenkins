@@ -1,0 +1,37 @@
+pipeline {
+    agent any  // use any available node/agent
+    
+    tools {
+        nodejs 'Node 18'
+    }
+    
+    stages {
+        stage('git-clone') {
+            steps {
+                git 'https://github.com/Sunnysahu/Jenkins.git'
+            }
+        }
+        stage('node check') {
+            steps {
+                sh 'node -v'
+                sh 'npm -v'
+            }
+        }
+        stage('build image') { 	 // Stage 3: Build a Docker image
+            steps {  
+                sh 'docker build -t sunnysahu8210/node2 .'
+            }
+        }
+        stage('deploy container') { 	 	// Stage 4: Deployment
+            steps {  
+                sh 'docker stop node2 || true'
+                sh 'docker rm node2 || true'
+                
+                
+                sh 'docker run -d -p 3000:3000 --name node2 sunnysahu8210/node2'
+                
+                sh 'docker image prune -a -f'
+            }
+        }
+    }
+}
