@@ -14,6 +14,7 @@ function App() {
       <h1>Hello Worl...</h1>
       <h1>Hello Sanjana Baby</h1>
       <h1>Hello Sunny</h1>
+      <h1>Hello Minor Change</h1>
 
       <img
         src={
