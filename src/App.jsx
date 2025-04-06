@@ -16,8 +16,10 @@ function App() {
       <h1>Hello Sunny</h1>
       <h1>Hello Minor Change</h1>
       <h1>Hello from Docker...</h1>
-      <h1>Hello from Docker...</h1>
-      <h1>Hello from Docker...</h1>
+      <h1>Hello from Jenkins...</h1>
+      <h1>Hello from VScode...</h1>
+      <h1>Hello from Ansible...</h1>
+      <h1>Hello from Tomcat...</h1>
 
       <img
         src={
